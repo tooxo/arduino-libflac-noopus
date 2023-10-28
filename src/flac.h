@@ -10,7 +10,7 @@
  */
 #pragma once
 
-#include "opus.h"
+// #include "opus.h"
 #include "share/compat.h"
 #include "FLAC/stream_decoder.h"
 #include "FLAC/stream_encoder.h"

@@ -29,7 +29,7 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if FLAC__HAS_OGG
 #if defined(HAVE_CONFIG_H) || defined(ARDUINO)
 #  include <flac_config.h>
 #endif
@@ -208,3 +208,4 @@ FLAC__bool simple_ogg_page__set_at(FLAC__StreamEncoder *encoder, FLAC__uint64 po
 
 	return true;
 }
+#endif

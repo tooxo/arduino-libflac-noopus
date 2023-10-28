@@ -33,6 +33,7 @@
 #ifndef FLAC__PRIVATE__OGG_DECODER_ASPECT_H
 #define FLAC__PRIVATE__OGG_DECODER_ASPECT_H
 
+#if FLAC__HAS_OGG
 #include <ogg/ogg.h>
 
 #include "FLAC/ordinals.h"
@@ -77,4 +78,5 @@ typedef FLAC__OggDecoderAspectReadStatus (*FLAC__OggDecoderAspectReadCallbackPro
 
 FLAC__OggDecoderAspectReadStatus FLAC__ogg_decoder_aspect_read_callback_wrapper(FLAC__OggDecoderAspect *aspect, FLAC__byte buffer[], size_t *bytes, FLAC__OggDecoderAspectReadCallbackProxy read_callback, const FLAC__StreamDecoder *decoder, void *client_data);
 
+#endif
 #endif

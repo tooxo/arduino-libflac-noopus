@@ -33,6 +33,8 @@
 #ifndef FLAC__PRIVATE__OGG_ENCODER_ASPECT_H
 #define FLAC__PRIVATE__OGG_ENCODER_ASPECT_H
 
+#if FLAC__HAS_OGG
+
 #include <ogg/ogg.h>
 
 #include "FLAC/ordinals.h"
@@ -60,4 +62,5 @@ void FLAC__ogg_encoder_aspect_finish(FLAC__OggEncoderAspect *aspect);
 typedef FLAC__StreamEncoderWriteStatus (*FLAC__OggEncoderAspectWriteCallbackProxy)(const void *encoder, const FLAC__byte buffer[], size_t bytes, uint32_t samples, uint32_t current_frame, void *client_data);
 
 FLAC__StreamEncoderWriteStatus FLAC__ogg_encoder_aspect_write_callback_wrapper(FLAC__OggEncoderAspect *aspect, const FLAC__byte buffer[], size_t bytes, uint32_t samples, uint32_t current_frame, FLAC__bool is_last_block, FLAC__OggEncoderAspectWriteCallbackProxy write_callback, void *encoder, void *client_data);
+#endif
 #endif
